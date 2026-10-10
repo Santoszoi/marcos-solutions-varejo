@@ -1,0 +1,5 @@
+import {test} from 'node:test';import assert from 'node:assert/strict';import {buildTaxFields} from '../server/fiscal.mjs';
+// Valores artificiais somente nos testes: comprovam que o comportamento vem dos dados.
+const base=()=>({regime:'perfil-teste',uf:'DF',date:'2026-09-29',catalog:{version:'rev-1',regimes:{'perfil-teste':{crt:'CRT-A',requiredFields:['codigo_a'],allowedCodes:{codigo_a:['A','B']}}}},profile:{regime:'perfil-teste',uf:'DF',approvedBy:'Contabilidade teste',validFrom:'2026-01-01',fields:{codigo_a:'A'}}});
+test('Catálogo controla CRT e validações sem mapas tributários no motor',()=>{const args=base();assert.equal(buildTaxFields(args).crt,'CRT-A');args.catalog.regimes['perfil-teste'].crt='CRT-B';assert.equal(buildTaxFields(args).crt,'CRT-B')});
+test('Configuração ausente ou perfil inválido bloqueia dados fiscais',()=>{const args=base();args.profile.fields.codigo_a='C';assert.throws(()=>buildTaxFields(args),/inválido/);assert.throws(()=>buildTaxFields({...base(),regime:'desconhecido'}),/Cadastre/)});

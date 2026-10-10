@@ -1,0 +1,14 @@
+node_modules/
+dados/
+*.sqlite*
+
+# Credenciais, certificados e dados locais
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+backups/
+*.log
