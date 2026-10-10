@@ -11,6 +11,23 @@ Para gerar a versão estática: `npm ci`, `npm run build:demo` e `npm run test:d
 
 PDV integrado de teste para DF, até seis caixas em uma rede local. Frontend React + TypeScript, servidor Node.js e banco SQLite. O código é entregue integralmente, mas esta versão NÃO é um emissor fiscal de produção.
 
+## Veja o PDV em ação
+
+![Frente de caixa com dois produtos e total calculado](docs/media/pdv-venda-real.jpg)
+
+**[Assistir à apresentação de 24 segundos (MP4)](https://github.com/Santoszoi/marcos-solutions-varejo/raw/refs/heads/main/docs/media/pdv-demo.mp4)** · [Testar agora](https://marcos-solutions-varejo-demo.vercel.app/)
+
+Vídeo sem áudio, montado com capturas reais da demonstração: carrinho → pagamento e troco → comprovante demonstrativo → histórico. Todos os dados são fictícios.
+
+<details>
+<summary>Ver pagamento e histórico</summary>
+
+![Pagamento em dinheiro com cálculo de troco](docs/media/pdv-pagamento-real.jpg)
+
+![Venda simulada registrada no histórico](docs/media/pdv-historico-real.jpg)
+
+</details>
+
 ## Executar no Windows
 
 1. Extraia a pasta inteira do ZIP Windows. Não execute dentro do ZIP nem copie apenas o EXE.
