@@ -1,5 +1,14 @@
 # Marcos Solutions Varejo — 0.3.2
 
+## Demonstração online
+
+[Abrir demonstração interativa](https://marcos-solutions-varejo-demo.vercel.app)
+
+Acesso direto como Visitante, produtos fictícios e caixa inicial aberto. Simulações ficam somente no navegador, sem cobranças, emissão fiscal ou sincronização entre dispositivos. Não insira dados reais. O botão Reiniciar demonstração apaga as simulações locais.
+
+Para gerar a versão estática: `npm ci`, `npm run build:demo` e `npm run test:demo`. Publique o conteúdo de `dist/`. O comando padrão `npm run build` continua gerando a versão conectada ao servidor local.
+
+
 PDV integrado de teste para DF, até seis caixas em uma rede local. Frontend React + TypeScript, servidor Node.js e banco SQLite. O código é entregue integralmente, mas esta versão NÃO é um emissor fiscal de produção.
 
 ## Executar no Windows
